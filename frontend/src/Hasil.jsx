@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react'
 import { useSearchParams, useNavigate } from 'react-router-dom'
+import Header from './Header'
 
 function Hasil() {
   const [searchParams] = useSearchParams()
@@ -29,53 +30,55 @@ function Hasil() {
   }, [url])
 
   return (
-    <div className="app">
-      <div className="brand">
-        <span className="spinner">✦</span>
-        <h1>Amanin</h1>
-      </div>
+    <div className="shell">
+      <aside className="sidebar">
+        <Header />
+        <p className="tagline">Cek keamanan sebuah situs</p>
+      </aside>
 
-      <button className="kembali" onClick={() => navigate('/')}>
-        ← periksa situs lain
-      </button>
+      <main className="main">
+        <div className="main-inner">
+          <button className="kembali" onClick={() => navigate('/beranda')}>
+            ← periksa situs lain
+          </button>
 
-      {loading && <p className="subtitle">Lagi meriksa {url}...</p>}
-      {error && <p className="error">{error}</p>}
+          {loading && <p className="subtitle">Lagi meriksa {url}...</p>}
+          {error && <p className="error">{error}</p>}
 
-      {hasil && (
-        <div className="laporan">
-          <div className={`grade grade-${hasil.grade}`}>
-            {hasil.grade}
-          </div>
-          <p className="skor">{hasil.skor}/100</p>
-          <p className="hostname">{hasil.hostname}</p>
+          {hasil && (
+            <div className="laporan">
+              <div className={`grade grade-${hasil.grade}`}>{hasil.grade}</div>
+              <p className="skor">{hasil.skor}/100</p>
+              <p className="hostname">{hasil.hostname}</p>
 
-          <div className="detail">
-            <h3>SSL / TLS</h3>
-            <p>{hasil.ssl.ok ? 'Aman ✓' : 'Bermasalah ✕'}</p>
-            <p>Diterbitkan oleh {hasil.ssl.issuer}, sisa {hasil.ssl.sisaHari} hari</p>
-          </div>
+              <div className="detail">
+                <h3>SSL / TLS</h3>
+                <p>{hasil.ssl.ok ? 'Aman ✓' : 'Bermasalah ✕'}</p>
+                <p>Diterbitkan oleh {hasil.ssl.issuer}, sisa {hasil.ssl.sisaHari} hari</p>
+              </div>
 
-          <div className="detail">
-            <h3>Header Keamanan</h3>
-            {hasil.headers.ditemukan.map((item) => (
-              <p key={item}>✓ {item}</p>
-            ))}
-            {hasil.headers.hilang.map((item) => (
-              <p key={item} className="kurang">✕ {item}</p>
-            ))}
-          </div>
+              <div className="detail">
+                <h3>Header Keamanan</h3>
+                {hasil.headers.ditemukan.map((item) => (
+                  <p key={item}>✓ {item}</p>
+                ))}
+                {hasil.headers.hilang.map((item) => (
+                  <p key={item} className="kurang">✕ {item}</p>
+                ))}
+              </div>
 
-          <div className="detail">
-            <h3>Mixed Content</h3>
-            <p>
-              {hasil.mixedContent.jumlahDitemukan === 0
-                ? 'Tidak ditemukan masalah ✓'
-                : `Ditemukan ${hasil.mixedContent.jumlahDitemukan} resource HTTP ✕`}
-            </p>
-          </div>
+              <div className="detail">
+                <h3>Mixed Content</h3>
+                <p>
+                  {hasil.mixedContent.jumlahDitemukan === 0
+                    ? 'Tidak ditemukan masalah ✓'
+                    : `Ditemukan ${hasil.mixedContent.jumlahDitemukan} resource HTTP ✕`}
+                </p>
+              </div>
+            </div>
+          )}
         </div>
-      )}
+      </main>
     </div>
   )
 }

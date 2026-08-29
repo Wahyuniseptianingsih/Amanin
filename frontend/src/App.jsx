@@ -1,4 +1,5 @@
 import { Routes, Route } from 'react-router-dom'
+import Intro from './Intro'
 import Beranda from './Beranda'
 import Hasil from './Hasil'
 import './App.css'
@@ -6,7 +7,8 @@ import './App.css'
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Beranda />} />
+      <Route path="/" element={<Intro />} />
+      <Route path="/beranda" element={<Beranda />} />
       <Route path="/hasil" element={<Hasil />} />
     </Routes>
   )
