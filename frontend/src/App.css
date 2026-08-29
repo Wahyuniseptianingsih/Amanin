@@ -1,0 +1,276 @@
+body {
+  background: #0d0d0e;
+  margin: 0;
+}
+
+.app {
+  max-width: 480px;
+  margin: 0 auto;
+  padding: 56px 24px 100px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  color: #e8e6e3;
+}
+
+.brand {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+}
+
+.spinner {
+  display: inline-block;
+  color: #e26a93;
+  font-size: 20px;
+  animation: putar 6s linear infinite;
+}
+
+@keyframes putar {
+  from { transform: rotate(0deg); }
+  to { transform: rotate(360deg); }
+}
+
+h1 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 28px;
+  margin: 0;
+  color: #e26a93;
+  letter-spacing: -0.5px;
+}
+
+.subtitle {
+  text-align: center;
+  color: #d9c98a;
+  font-size: 14px;
+  margin: 12px 0 0;
+  line-height: 1.5;
+}
+
+.form {
+  display: flex;
+  gap: 0;
+  margin-top: 40px;
+  border-bottom: 1px solid #3a3a3d;
+}
+
+.form input {
+  flex: 1;
+  padding: 10px 4px;
+  border: none;
+  background: transparent;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 14px;
+  color: #e8e6e3;
+  outline: none;
+}
+
+.form input::placeholder {
+  color: #4a4a4d;
+}
+
+.form button {
+  padding: 10px 16px;
+  border: none;
+  background: none;
+  color: #e26a93;
+  font-family: 'IBM Plex Mono', monospace;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 2px;
+  cursor: pointer;
+}
+
+.form button:disabled {
+  color: #4a4a4d;
+}
+
+.about {
+  margin-top: 56px;
+  text-align: center;
+}
+
+.radar {
+  width: 96px;
+  height: 96px;
+}
+
+.radar-ring {
+  fill: none;
+  stroke: #2a2a2c;
+  stroke-width: 1;
+}
+
+.radar-sweep {
+  stroke: #e26a93;
+  stroke-width: 1.5;
+  transform-origin: 60px 60px;
+  animation: putar 4s linear infinite;
+}
+
+.about h2 {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 17px;
+  color: #e26a93;
+  margin: 20px 0 10px;
+  letter-spacing: -0.2px;
+}
+
+.about p {
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-size: 13px;
+  line-height: 1.7;
+  color: #d9c98a;
+  margin: 0;
+}
+
+.preview {
+  margin-top: 56px;
+}
+
+.preview-label {
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: 3px;
+  color: #4a4a4d;
+  margin-bottom: 16px;
+}
+
+.preview-item {
+  display: flex;
+  gap: 16px;
+  padding: 14px 0;
+  border-top: 1px solid #232324;
+}
+
+.preview-no {
+  color: #e26a93;
+  font-size: 13px;
+  min-width: 24px;
+}
+
+.preview-title {
+  margin: 0;
+  font-size: 13px;
+  color: #e8e6e3;
+}
+
+.preview-desc {
+  margin: 3px 0 0;
+  font-size: 12px;
+  color: #6b6b6f;
+}
+
+.laporan {
+  margin-top: 48px;
+  border: 1px solid #232324;
+  padding: 32px 24px;
+}
+
+.grade {
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 1px solid currentColor;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 700;
+  font-size: 26px;
+  margin: 0 auto;
+}
+
+.grade-A { color: #7fae6f; }
+.grade-B { color: #a3ae6f; }
+.grade-C { color: #d9b46a; }
+.grade-D { color: #d98f5a; }
+.grade-F { color: #e26a93; }
+
+.skor {
+  color: #6b6b6f;
+  margin-top: 12px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+
+.hostname {
+  font-family: 'Space Grotesk', sans-serif;
+  font-weight: 500;
+  font-size: 16px;
+  color: #e26a93;
+  margin-bottom: 24px;
+}
+
+.detail {
+  text-align: left;
+  margin-top: 20px;
+  padding-top: 14px;
+  border-top: 1px solid #232324;
+}
+
+.detail h3 {
+  margin: 0 0 10px;
+  font-size: 10px;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #4a4a4d;
+}
+
+.detail p {
+  margin: 5px 0;
+  font-size: 13px;
+  color: #b5b3af;
+}
+
+.kurang {
+  color: #e26a93;
+}
+
+.error {
+  color: #e26a93;
+  margin-top: 20px;
+  font-size: 13px;
+}
+.hacker-scene {
+  margin-top: 48px;
+  display: flex;
+  justify-content: center;
+}
+
+   .hacker {
+     width: 260px;
+     height: auto;
+   }
+.app {
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+}
+.radar-kecil {
+  width: 22px;
+  height: 22px;
+}
+
+.radar-kecil .radar-ring {
+  stroke: #5a5a5f;
+}
+
+.radar-kecil .radar-sweep {
+  stroke: #e26a93;
+  stroke-width: 2.5;
+}
+.kembali {
+  background: none;
+  border: none;
+  color: #6b6b6f;
+  font-family: 'IBM Plex Mono', monospace;
+  font-size: 13px;
+  cursor: pointer;
+  margin-top: 24px;
+  padding: 0;
+}
+
+.kembali:hover {
+  color: #e26a93;
+}

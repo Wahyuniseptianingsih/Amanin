@@ -1,0 +1,15 @@
+import { Routes, Route } from 'react-router-dom'
+import Beranda from './Beranda'
+import Hasil from './Hasil'
+import './App.css'
+
+function App() {
+  return (
+    <Routes>
+      <Route path="/" element={<Beranda />} />
+      <Route path="/hasil" element={<Hasil />} />
+    </Routes>
+  )
+}
+
+export default App
