@@ -1,3 +1,4 @@
+import 'dotenv/config';
 import express from "express";
 import cors from "cors";
 import { checkSsl } from "./checks/ssl.js";
@@ -35,7 +36,7 @@ app.get("/api/scan", async (req, res) => {
     const detail = { ssl: hasilSsl, headers: hasilHeaders, mixedContent: hasilMixed };
 
     await pool.query(
-      "INSERT INTO scans (url, skor, grade, detail) VALUES (?, ?, ?, ?)",
+      "INSERT INTO scans (url, skor, grade, detail) VALUES ($1, $2, $3, $4)",
       [hostname, skor, grade, JSON.stringify(detail)]
     );
 
@@ -55,7 +56,7 @@ app.get("/api/scan", async (req, res) => {
 
 app.get("/api/history", async (req, res) => {
   try {
-    const [rows] = await pool.query(
+    const { rows } = await pool.query(
       "SELECT id, url, skor, grade, created_at FROM scans ORDER BY created_at DESC LIMIT 20"
     );
     res.json(rows);
