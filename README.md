@@ -4,10 +4,6 @@ Amanin adalah aplikasi web untuk mengecek tingkat keamanan sebuah situs sebelum 
 
 Project ini dibuat sebagai portofolio pribadi sekaligus sarana belajar full-stack development, mulai dari logika backend, desain antarmuka, hingga proses deployment.
 
-![Hasil Pemeriksaan Amanin](amanin-03-hasil.png)
-
-**Halaman Hasil Penilaian** — menampilkan skor keamanan (0-100) dan grade (A-F) sebuah situs, lengkap dengan detail pemeriksaan SSL/TLS, header keamanan, dan mixed content.
-
 ## Latar Belakang
 
 Di tengah maraknya situs phishing dan tidak aman, banyak pengguna internet awam yang kesulitan menilai apakah sebuah situs aman diakses atau tidak. Amanin hadir sebagai alat sederhana yang bisa dipakai siapa saja, tanpa perlu pengetahuan teknis, untuk mendapatkan gambaran cepat soal keamanan sebuah situs.
