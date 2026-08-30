@@ -50,7 +50,28 @@ function Hasil() {
               <div className={`grade grade-${hasil.grade}`}>{hasil.grade}</div>
               <p className="skor">{hasil.skor}/100</p>
               <p className="hostname">{hasil.hostname}</p>
-
+<div className="grade-legend">
+  <div className={`legend-item ${hasil.grade === 'A' ? 'aktif' : ''}`}>
+    <span className="legend-huruf">A</span>
+    <span>90–100 · Sangat aman</span>
+  </div>
+  <div className={`legend-item ${hasil.grade === 'B' ? 'aktif' : ''}`}>
+    <span className="legend-huruf">B</span>
+    <span>70–89 · Cukup aman</span>
+  </div>
+  <div className={`legend-item ${hasil.grade === 'C' ? 'aktif' : ''}`}>
+    <span className="legend-huruf">C</span>
+    <span>50–69 · Perlu perhatian</span>
+  </div>
+  <div className={`legend-item ${hasil.grade === 'D' ? 'aktif' : ''}`}>
+    <span className="legend-huruf">D</span>
+    <span>30–49 · Rentan</span>
+  </div>
+  <div className={`legend-item ${hasil.grade === 'F' ? 'aktif' : ''}`}>
+    <span className="legend-huruf">F</span>
+    <span>0–29 · Tidak aman</span>
+  </div>
+</div>
               <div className="detail">
                 <h3>SSL / TLS</h3>
                 <p>{hasil.ssl.ok ? 'Aman ✓' : 'Bermasalah ✕'}</p>
