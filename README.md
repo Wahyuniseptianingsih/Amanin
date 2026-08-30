@@ -100,13 +100,6 @@ Frontend akan berjalan di `http://localhost:5173`
 
 ### Halaman Cek Situs
 ![Halaman Beranda](amanin-02-beranda.png)
-## Tampilan Lainnya
-
-### Halaman Pembuka
-![Halaman Intro](amanin-01-intro.png)
-
-### Halaman Cek Situs
-![Halaman Beranda](amanin-02-beranda.png)
 
 ## Rencana Pengembangan Selanjutnya
 
