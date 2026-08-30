@@ -91,7 +91,14 @@ Backend project ini membutuhkan koneksi database dan environment variable, sehin
 
 ## Screenshot
 
-<!-- Tempel screenshot atau GIF demo aplikasi di sini -->
+### Halaman Pembuka
+![Halaman Intro](amanin-01-intro.png)
+
+### Halaman Cek Situs
+![Halaman Beranda](amanin-02-beranda.png)
+
+### Hasil Pemeriksaan
+![Halaman Hasil](amanin-03-hasil.png)
 
 ## Rencana Pengembangan Selanjutnya
 
