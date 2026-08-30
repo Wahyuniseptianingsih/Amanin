@@ -6,6 +6,7 @@ Project ini dibuat sebagai portofolio pribadi sekaligus sarana belajar full-stac
 
 ![Hasil Pemeriksaan Amanin](amanin-03-hasil.png)
 
+**Halaman Hasil Penilaian** — menampilkan skor keamanan (0-100) dan grade (A-F) sebuah situs, lengkap dengan detail pemeriksaan SSL/TLS, header keamanan, dan mixed content.
 
 ## Latar Belakang
 
@@ -93,13 +94,27 @@ Frontend akan berjalan di `http://localhost:5173`
 **Deployment:** Local development environment
 **Status:** Siap dijalankan secara lokal mengikuti langkah di atas
 
-## Tampilan Lainnya
+## Tampilan Aplikasi
 
-### Halaman Pembuka
+### 1. Halaman Pembuka
 ![Halaman Intro](amanin-01-intro.png)
 
-### Halaman Cek Situs
+Halaman awal saat membuka Amanin, berisi penjelasan singkat fungsi aplikasi dan tombol untuk mulai memeriksa situs.
+
+### 2. Halaman Cek Situs
 ![Halaman Beranda](amanin-02-beranda.png)
+
+Pengguna memasukkan alamat situs yang ingin diperiksa pada halaman ini.
+
+### 3. Halaman Hasil Penilaian
+![Hasil Pemeriksaan Amanin](amanin-03-hasil.png)
+
+Menampilkan skor keamanan (0-100) dan grade (A-F) sebuah situs, lengkap dengan detail pemeriksaan SSL/TLS, header keamanan, dan mixed content.
+
+### 4. Halaman Riwayat
+![Halaman Riwayat](amanin-04-riwayat.png)
+
+Menampilkan daftar situs yang pernah diperiksa sebelumnya, lengkap dengan skor, grade, dan waktu pemeriksaan.
 
 ## Rencana Pengembangan Selanjutnya
 
