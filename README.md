@@ -4,6 +4,9 @@ Amanin adalah aplikasi web untuk mengecek tingkat keamanan sebuah situs sebelum 
 
 Project ini dibuat sebagai portofolio pribadi sekaligus sarana belajar full-stack development, mulai dari logika backend, desain antarmuka, hingga proses deployment.
 
+![Hasil Pemeriksaan Amanin](amanin-03-hasil.png)
+
+
 ## Latar Belakang
 
 Di tengah maraknya situs phishing dan tidak aman, banyak pengguna internet awam yang kesulitan menilai apakah sebuah situs aman diakses atau tidak. Amanin hadir sebagai alat sederhana yang bisa dipakai siapa saja, tanpa perlu pengetahuan teknis, untuk mendapatkan gambaran cepat soal keamanan sebuah situs.
@@ -85,20 +88,18 @@ Buka terminal baru, lalu:
 
 Frontend akan berjalan di `http://localhost:5173`
 
-## Tentang Deployment
+## Status Deployment
 
-Backend project ini membutuhkan koneksi database dan environment variable, sehingga proses deployment sempat dieksplorasi ke beberapa platform (Render, Railway, dan Back4App Containers). Untuk saat ini, demo dijalankan secara lokal mengikuti langkah di atas. Tangkapan layar aplikasi dapat dilihat di bawah ini.
+**Deployment:** Local development environment
+**Status:** Siap dijalankan secara lokal mengikuti langkah di atas
 
-## Screenshot
+## Tampilan Lainnya
 
 ### Halaman Pembuka
 ![Halaman Intro](amanin-01-intro.png)
 
 ### Halaman Cek Situs
 ![Halaman Beranda](amanin-02-beranda.png)
-
-### Hasil Pemeriksaan
-![Halaman Hasil](amanin-03-hasil.png)
 
 ## Rencana Pengembangan Selanjutnya
 
